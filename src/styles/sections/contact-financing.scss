@@ -1,0 +1,156 @@
+$primary-color: #1D8F2C;
+$text-dark: #232434;
+$text-gray: #555;
+$transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.contact-financing {
+  padding: 100px 0 120px;
+  background: #fff;
+
+  .contact-financing__header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+
+    .subtitle {
+      color: $primary-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 42px;
+      color: $text-dark;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: $text-gray;
+      line-height: 1.6;
+    }
+  }
+
+  .contact-financing__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.option-card {
+  background: #fcfcfc;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: $transition;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 25px;
+    img { width: 100%; height: 100%; object-fit: contain; }
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 15px;
+    color: $text-gray;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+    transform: translateY(-5px);
+    border-color: rgba($primary-color, 0.2);
+  }
+}
+
+.contact-financing__cta-box {
+  margin-top: 60px;
+  
+  .cta-inner {
+    background: $text-dark;
+    border-radius: 30px;
+    padding: 60px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba($primary-color, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.8;
+      margin-bottom: 35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn-main-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: $primary-color;
+      color: #fff;
+      padding: 20px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      transition: $transition;
+      position: relative;
+      z-index: 2;
+
+      svg { transition: transform 0.3s ease; }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba($primary-color, 0.4);
+        
+        svg { transform: translateX(5px); }
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+      h3 { font-size: 26px; }
+    }
+  }
+}
