@@ -5,7 +5,6 @@
     overflow: hidden;
     background-color: #000;
   
-    // Slika sa overlay-om direktno unutar slide-a
     .hero-image {
       width: 100vw;
       height: 100vh;
@@ -25,7 +24,6 @@
       }
     }
   
-    // Glavni kontejner za tekst i dugme - savršeno centriran
     .container {
       position: absolute;
       top: 50%;
@@ -64,7 +62,7 @@
         position: relative;
   
         .theme-btn {
-          background-color: #1D8F2C; // Koristimo vašu boju iz projekta
+          background-color: #1D8F2C;
           color: #fff;
           padding: 18px 40px;
           font-size: 16px;
@@ -79,12 +77,11 @@
           z-index: 1;
           border: none;
           
-          // Gornja polovina - skrivena kada nema hover
           &::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -100%; // Skrivena van dugmeta
+            left: -100%; 
             width: 100%;
             height: 50%;
             background: #fff;
@@ -92,12 +89,11 @@
             transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           }
           
-          // Donja polovina - skrivena kada nema hover
           &::after {
             content: '';
             position: absolute;
             bottom: 0;
-            right: -100%; // Skrivena van dugmeta
+            right: -100%;
             width: 100%;
             height: 50%;
             background: #fff;
@@ -106,16 +102,14 @@
           }
   
           &:hover {
-            color: #1D8F2C; // Tekst postaje zelen na hover
+            color: #1D8F2C;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(29, 143, 44, 0.4);
-            
-            // Gornja polovina ulazi sa lijeva na desno
+        
             &::before {
               left: 0;
             }
             
-            // Donja polovina ulazi sa desna na lijevo
             &::after {
               right: 0;
             }
@@ -124,7 +118,6 @@
       }
     }
   
-    // NAVIGACIJA - Fiksirana da ne bježi van ekrana
     .array-button {
       position: absolute;
       top: 50%;
@@ -178,7 +171,6 @@
       }
     }
   
-    // Paginacija na dnu
     .dot-2 {
       position: absolute;
       bottom: 35px;
@@ -204,7 +196,6 @@
     }
   }
   
-  // Swiper Slide Zoom Animacija
   .swiper-slide-active .hero-image {
     animation: zoomEffect 8s ease-out forwards;
   }

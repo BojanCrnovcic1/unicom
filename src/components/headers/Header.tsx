@@ -12,14 +12,12 @@ const Header = () => {
     const controlHeader = () => {
         const currentScrollY = window.scrollY;
         
-        // Sticky logika
         setIsSticky(currentScrollY > 100);
 
-        // Show/Hide logika na skrol
         if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            setIsVisible(false); // Skrol dole - sakrij
+            setIsVisible(false); 
         } else {
-            setIsVisible(true);  // Skrol gore - prikaži
+            setIsVisible(true); 
         }
         setLastScrollY(currentScrollY);
     };
@@ -35,7 +33,6 @@ const Header = () => {
     return (
         <header className={`main-header-wrapper ${isVisible ? 'header-visible' : 'header-hidden'} ${isSticky ? 'is-sticky' : ''}`}>
             
-            {/* TopHeader - sakriva se u sticky modu */}
             {!isSticky && <TopHeaderOne />} 
             
             <div className="header-main-area">
@@ -49,7 +46,6 @@ const Header = () => {
                         </div>
 
                         <div className="header-navigation-area">
-                            {/* Navigacija */}
                             <nav className={`main-nav ${isMenuOpen ? 'menu-open' : ''}`}>
                                 <NavLink to="/solutions" onClick={closeMenu}>Solutions</NavLink>
                                 <NavLink to="/platform" onClick={closeMenu}>Platform</NavLink>
@@ -58,7 +54,6 @@ const Header = () => {
                                 <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
                             </nav>
 
-                            {/* Hamburger / Close dugme */}
                             <button 
                                 className={`mobile-menu-trigger ${isMenuOpen ? 'active' : ''}`}
                                 onClick={toggleMenu}
@@ -72,7 +67,6 @@ const Header = () => {
                 </div>
             </div>
 
-            {/* Overlay za zatvaranje na klik van menija */}
             <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
         </header>
     )

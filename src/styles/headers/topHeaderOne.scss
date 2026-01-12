@@ -1,4 +1,3 @@
-// TopHeaderOne.scss
 .header-top-section {
     background-color: #232434;
     padding: 10px 0;
@@ -131,12 +130,10 @@
       }
     }
     
-    // Sakrij na mobilnim uređajima (max-width: 768px)
     @media (max-width: 768px) {
       display: none;
     }
     
-    // Tablet optimizacija
     @media (min-width: 769px) and (max-width: 992px) {
       .contact-list {
         flex-direction: column;

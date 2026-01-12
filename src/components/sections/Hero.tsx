@@ -32,7 +32,6 @@ const heroSlides = [
 const Hero = () => {
     return (
         <section className="hero-section hero-3" style={{ position: 'relative', overflow: 'hidden' }}>
-            {/* Navigacioni dugmići sa ARIA labelama za accessibility */}
             <div className="array-button">
                 <button className="array-prev" aria-label="Previous Slide">
                     <i className="fa fa-arrow-left" aria-hidden="true" />
@@ -130,7 +129,6 @@ const Hero = () => {
                 ))}
             </Swiper>
             
-            {/* Kontejner za tačkice (Pagination) */}
             <div className="dot-2" style={{ 
                 textAlign: 'center', 
                 position: 'absolute', 

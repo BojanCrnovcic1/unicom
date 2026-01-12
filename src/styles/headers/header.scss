@@ -1,4 +1,3 @@
-// Reset i Varijable
 $primary-color: #1D8F2C;
 $text-dark: #232434;
 $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,7 +46,7 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
 .header-logo {
   flex-shrink: 0;
-  z-index: 10002; // Iznad svega da se vidi logotip i u meniju
+  z-index: 10002;
   img {
     max-height: 65px;
     width: auto;
@@ -109,7 +108,6 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-// Modernizovan Hamburger / Trigger
 .mobile-menu-trigger {
   display: none;
   background: none;
@@ -119,7 +117,7 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 35px;
   position: relative;
   margin-left: 20px;
-  z-index: 10002; // Mora biti iznad overlay-a i menija
+  z-index: 10002;
   padding: 0;
 
   span {
@@ -133,7 +131,7 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 2px;
     
     &:nth-child(1) { top: 10px; }
-    &:nth-child(2) { top: 17px; width: 20px; left: 12px; } // Srednja crta je kraća (moderno)
+    &:nth-child(2) { top: 17px; width: 20px; left: 12px; }
     &:nth-child(3) { top: 24px; }
   }
 
@@ -145,7 +143,6 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-// MODERAN MOBILNI MENI
 @media (max-width: 991px) {
   .mobile-menu-trigger { display: block; }
 
@@ -157,10 +154,10 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100vh;
     background: rgba(255, 255, 255, 0.95);
     -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px); // Glassmorphism
+    backdrop-filter: blur(15px); 
     flex-direction: column;
     padding: 120px 40px 40px 40px;
-    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1); // Uglađeniji slide
+    transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
     box-shadow: -15px 0 40px rgba(0,0,0,0.08);
     gap: 15px;
     z-index: 10001;
@@ -168,7 +165,6 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     &.menu-open { 
       right: 0; 
       
-      // Animacija linkova (ulaze jedan za drugim)
       a {
         opacity: 1;
         transform: translateX(0);
@@ -181,24 +177,23 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       color: $text-dark;
       padding: 15px 20px;
       border-radius: 12px;
-      border-bottom: none; // Uklanjamo staru liniju za moderan izgled
+      border-bottom: none;
       width: 100%;
       background: transparent;
       opacity: 0;
       transform: translateX(30px);
       transition: all 0.4s ease;
 
-      // Staggered delay za ulazak linkova
       @for $i from 1 through 6 {
         &:nth-child(#{$i}) { transition-delay: #{$i * 0.1}s; }
       }
 
-      &::after, &::before { display: none; } // Sklanjamo tacke i linije na mobilnom
+      &::after, &::before { display: none; }
 
       &:hover, &.active {
         background: rgba($primary-color, 0.08);
         color: $primary-color;
-        padding-left: 30px; // Mala animacija pomjeranja teksta
+        padding-left: 30px;
       }
     }
   }
