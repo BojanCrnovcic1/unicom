@@ -20,25 +20,25 @@ const CoreCapabilities = () => {
       id: 2,
       title: "Advanced Energy Optimization",
       text: "Intelligent energy flow management between generation, storage, and the grid.",
-      img: "/assets/img/coreCopabilites/coreCop2.jpeg"
+      img: "/assets/img/coreCopabilites/coreCop2.png"
     },
     {
       id: 3,
       title: "Forecast-Based Automation",
       text: "Automated decision-making using forecasting of generation and electricity prices.",
-      img: "/assets/img/coreCopabilites/coreCop1.jpeg"
+      img: "/assets/img/coreCopabilites/coreCop3.png"
     },
     {
       id: 4,
       title: "Islanding & Black-Start",
       text: "Support for islanded operation and microgrid control during outages.",
-      img: "/assets/img/coreCopabilites/coreCop2.jpeg"
+      img: "/assets/img/coreCopabilites/coreCop4.png"
     },
     {
       id: 5,
       title: "Fail-Safe & Fallback Logic",
       text: "Built-in fail-safe mechanisms ensure secure system operation under all conditions.",
-      img: "/assets/img/coreCopabilites/coreCop1.jpeg"
+      img: "/assets/img/coreCopabilites/coreCop5.png"
     }
   ];
 
@@ -83,7 +83,6 @@ const CoreCapabilities = () => {
         </Swiper>
       </div>
 
-      {/* Lightbox / Zoom Modal */}
       {selectedImg && (
         <div className="image-lightbox" onClick={() => setSelectedImg(null)}>
           <div className="lightbox-content">

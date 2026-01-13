@@ -10,15 +10,27 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 9999;
   transition: $transition;
 
-  &.header-hidden { transform: translateY(-100%); }
-  &.header-visible { transform: translateY(0); }
+  &.header-hidden {
+    transform: translateY(-100%);
+  }
+
+  &.header-visible {
+    transform: translateY(0);
+  }
 
   &.is-sticky {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    .header-main-area { min-height: 80px; }
+
+    .header-main-area {
+      min-height: 80px;
+
+      @media (max-width: 768px) {
+        min-height: 70px;
+      }
+    }
   }
 }
 
@@ -28,6 +40,14 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   transition: $transition;
+
+  @media (max-width: 1024px) {
+    min-height: 90px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 75px;
+  }
 }
 
 .custom-container {
@@ -35,6 +55,14 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @media (max-width: 1024px) {
+    padding: 0 28px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 }
 
 .header-main-inner {
@@ -47,11 +75,23 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 .header-logo {
   flex-shrink: 0;
   z-index: 10002;
+
   img {
     max-height: 65px;
     width: auto;
     transition: $transition;
-    .is-sticky & { max-height: 50px; }
+
+    .is-sticky & {
+      max-height: 50px;
+    }
+
+    @media (max-width: 1024px) {
+      max-height: 55px;
+    }
+
+    @media (max-width: 768px) {
+      max-height: 45px;
+    }
   }
 }
 
@@ -97,9 +137,14 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       transition: 0.3s;
     }
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
       color: $primary-color;
-      &::before { width: 100%; }
+
+      &::before {
+        width: 100%;
+      }
+
       &::after {
         transform: translateY(-50%) scale(1);
         animation: navPulse 1.5s infinite;
@@ -113,8 +158,8 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: none;
   border: none;
   cursor: pointer;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   position: relative;
   margin-left: 20px;
   z-index: 10002;
@@ -126,45 +171,65 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 2px;
     background: $text-dark;
     position: absolute;
-    left: 4px;
+    left: 6px;
     transition: $transition;
     border-radius: 2px;
-    
-    &:nth-child(1) { top: 10px; }
-    &:nth-child(2) { top: 17px; width: 20px; left: 12px; }
-    &:nth-child(3) { top: 24px; }
+
+    &:nth-child(1) { top: 12px; }
+    &:nth-child(2) { top: 19px; width: 20px; left: 14px; }
+    &:nth-child(3) { top: 26px; }
   }
 
   &.active {
-    span { background: $primary-color; }
-    span:nth-child(1) { transform: rotate(45deg); top: 17px; width: 28px; left: 4px; }
-    span:nth-child(2) { opacity: 0; }
-    span:nth-child(3) { transform: rotate(-45deg); top: 17px; width: 28px; left: 4px; }
+    span {
+      background: $primary-color;
+    }
+
+    span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 19px;
+      width: 28px;
+      left: 6px;
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 19px;
+      width: 28px;
+      left: 6px;
+    }
   }
 }
 
 @media (max-width: 991px) {
-  .mobile-menu-trigger { display: block; }
+  .mobile-menu-trigger {
+    display: block;
+  }
 
   .main-nav {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 340px;
+    width: 360px;
+    max-width: 100%;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(15px); 
+    background: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     flex-direction: column;
-    padding: 120px 40px 40px 40px;
+    padding: 110px 32px 40px;
     transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
     box-shadow: -15px 0 40px rgba(0,0,0,0.08);
-    gap: 15px;
+    gap: 10px;
     z-index: 10001;
 
-    &.menu-open { 
-      right: 0; 
-      
+    &.menu-open {
+      right: 0;
+
       a {
         opacity: 1;
         transform: translateX(0);
@@ -175,22 +240,26 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       font-size: 22px;
       font-weight: 700;
       color: $text-dark;
-      padding: 15px 20px;
-      border-radius: 12px;
-      border-bottom: none;
+      padding: 16px 22px;
+      border-radius: 14px;
       width: 100%;
-      background: transparent;
       opacity: 0;
       transform: translateX(30px);
       transition: all 0.4s ease;
 
       @for $i from 1 through 6 {
-        &:nth-child(#{$i}) { transition-delay: #{$i * 0.1}s; }
+        &:nth-child(#{$i}) {
+          transition-delay: #{$i * 0.08}s;
+        }
       }
 
-      &::after, &::before { display: none; }
+      &::before,
+      &::after {
+        display: none;
+      }
 
-      &:hover, &.active {
+      &:hover,
+      &.active {
         background: rgba($primary-color, 0.08);
         color: $primary-color;
         padding-left: 30px;
@@ -200,24 +269,22 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   .nav-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(35, 36, 52, 0.4);
+    inset: 0;
+    background: rgba(35, 36, 52, 0.45);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     z-index: 10000;
-    display: none;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.4s ease;
 
-    &.active { 
-      display: block; 
+    &.active {
       opacity: 1;
+      pointer-events: all;
     }
   }
 }
+
 
 @keyframes navPulse {
   0% { box-shadow: 0 0 0 0 rgba(29, 143, 44, 0.5); }

@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import ContactFinancing from "../components/sections/ContactFinancing"
 import CoreCapabilities from "../components/sections/CoreCapabilities"
 import CustomerBenefits from "../components/sections/CustomerBenefits"
@@ -19,6 +20,7 @@ const Home = () => {
       <IndustrialArchitecture />
       <MarketGridReadiness />
       <ContactFinancing />
+      <Footer />
     </>
   )
 }
