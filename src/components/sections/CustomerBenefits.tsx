@@ -5,32 +5,32 @@ const CustomerBenefits = () => {
     {
       title: "Reduced Energy Costs",
       desc: "Intelligent energy management optimizes consumption and generation, lowering operational expenses.",
-      img: "/images/cost.png"
+      img: "/assets/img/CustomerBenefits/cb1.png"
     },
     {
       title: "Increased Energy Independence",
       desc: "Maximize self-consumption and minimize reliance on the grid, improving resilience.",
-      img: "/images/independence.png"
+      img: "/assets/img/CustomerBenefits/cb2.png"
     },
     {
       title: "Higher Asset Utilization",
       desc: "Efficient coordination of generation and storage ensures maximum performance from all assets.",
-      img: "/images/utilization.png"
+      img: "/assets/img/CustomerBenefits/cb3.png"
     },
     {
       title: "Extended Battery Lifetime",
       desc: "Optimized charge/discharge cycles protect battery health and extend system longevity.",
-      img: "/images/lifetime.png"
+      img: "/assets/img/CustomerBenefits/cb4.png"
     },
     {
       title: "Improved ROI",
       desc: "Enhanced efficiency and predictable performance increase financial returns and bankability.",
-      img: "/images/roi.png"
+      img: "/assets/img/CustomerBenefits/cb5.png"
     },
     {
       title: "Future-Proof Architecture",
       desc: "Scalable and modular design ensures readiness for future energy market requirements.",
-      img: "/images/future-proof.png"
+      img: "/assets/img/CustomerBenefits/cb6.png"
     }
   ];
 

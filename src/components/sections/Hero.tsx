@@ -11,19 +11,25 @@ import 'swiper/css/effect-fade';
 const heroSlides = [
     {
         id: 1,
-        image: '/public/assets/img/hero/hero1.jpg',
+        image: '/assets/img/hero/hero1.jpg',
         title: 'UNICOM - We bring the Future in Energy Solutions',
         link: '/project-details',
     },
     {
         id: 2,
-        image: '/public/assets/img/hero/hero2.jpg',
+        image: '/assets/img/hero/hero2.jpeg',
         title: 'UNICOM - We bring the Future in Energy Solutions',
         link: '/project-details',
     },
     {
         id: 3,
-        image: '/public/assets/img/hero/hero3.jpg',
+        image: '/assets/img/hero/hero3.jpeg',
+        title: 'UNICOM - We bring the Future in Energy Solutions',
+        link: '/project-details',
+    },
+    {
+        id: 4,
+        image: '/assets/img/hero/hero4.jpg',
         title: 'UNICOM - We bring the Future in Energy Solutions',
         link: '/project-details',
     },

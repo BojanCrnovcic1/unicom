@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      {/* TOP INFO BAR */}
       <div className="footer-top">
         <div className="footer-top__item">
           <span className="footer-top__label">Call us 24/7</span>
@@ -22,10 +21,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* MAIN FOOTER */}
       <div className="footer-main">
 
-        {/* COLUMN 1 */}
         <div className="footer-col footer-brand">
           <div className="footer-logo">UNICOM</div>
           <p>
@@ -41,7 +38,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* COLUMN 2 */}
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul>
@@ -53,7 +49,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* COLUMN 3 */}
         <div className="footer-col">
           <h4>Services</h4>
           <ul>
@@ -65,7 +60,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* COLUMN 4 */}
         <div className="footer-col">
           <h4>Recent Posts</h4>
 
@@ -81,7 +75,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* BOTTOM BAR */}
       <div className="footer-bottom">
         © 2026 UNICOM Energy Systems. All rights reserved.
       </div>

@@ -1,291 +1,179 @@
-   $primary-color: #1D8F2C;
-   $text-dark: #232434;
-   $text-gray: #6b7280;
-   $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-   
-   .use-cases, .use-cases * {
-     box-sizing: border-box;
-   }
-  
-   @keyframes fadeUp {
-     from {
-       opacity: 0;
-       transform: translateY(30px);
-     }
-     to {
-       opacity: 1;
-       transform: translateY(0);
-     }
-   }
-   
-   .custom-container {
-     width: 100%;
-     max-width: 1240px;
-     margin: 0 auto;
-     padding: 0 20px;
-     position: relative;
-   
-     @media (max-width: 768px) {
-       padding: 0 16px;
-     }
-   }
-   
-   .use-cases {
-     padding: 100px 0;
-     background-color: #f4f7f5;
-     position: relative;
-     width: 100%;
-     overflow-x: hidden; 
-   
-     @media (max-width: 1024px) {
-       padding: 80px 0;
-     }
-   
-     @media (max-width: 768px) {
-       padding: 60px 0;
-     }
-   
-     @media (max-width: 480px) {
-       padding: 50px 0;
-     }
-   
-     .use-cases__header {
-       text-align: center;
-       max-width: 720px;
-       margin: 0 auto 60px;
-       padding: 0 10px;
-   
-       @media (max-width: 768px) {
-         margin-bottom: 50px;
-       }
-   
-       @media (max-width: 480px) {
-         margin-bottom: 40px;
-       }
-   
-       .subtitle {
-         color: $primary-color;
-         font-weight: 700;
-         text-transform: uppercase;
-         letter-spacing: 2px;
-         font-size: 14px;
-         display: block;
-         margin-bottom: 10px;
-       }
-   
-       h2 {
-         font-size: 42px;
-         font-weight: 800;
-         color: $text-dark;
-         margin-bottom: 15px;
-         word-wrap: break-word; 
-   
-         @media (max-width: 768px) {
-           font-size: 32px;
-         }
-   
-         @media (max-width: 480px) {
-           font-size: 28px;
-         }
-       }
-   
-       .header-line {
-         width: 60px;
-         height: 4px;
-         background: $primary-color;
-         margin: 0 auto 25px;
-         border-radius: 2px;
-       }
-   
-       p {
-         font-size: 18px;
-         color: $text-gray;
-         line-height: 1.6;
-   
-         @media (max-width: 768px) {
-           font-size: 16px;
-         }
-       }
-     }
-   }
-   
-   .use-cases__grid {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 30px;
-     width: 100%;
-     box-sizing: border-box;
-   
-     @media (max-width: 1200px) {
-       grid-template-columns: repeat(2, 1fr);
-       gap: 26px;
-     }
-   
-     @media (max-width: 768px) {
-       grid-template-columns: 1fr;
-       gap: 20px;
-     }
-   }
-  
-   .use-case-card {
-     background: #ffffff;
-     padding: 40px;
-     border-radius: 22px;
-     position: relative;
-     overflow: hidden;
-     border: 1px solid rgba(0, 0, 0, 0.04);
-     display: flex;
-     flex-direction: column;
-     height: 100%;
-     width: 100%;
-     min-width: 0; 
-     transition: $transition;
-     box-sizing: border-box;
-   
-     opacity: 0;
-     animation: fadeUp 0.8s ease forwards;
-   
-     @for $i from 1 through 6 {
-       &:nth-child(#{$i}) {
-         animation-delay: #{$i * 0.05}s;
-       }
-     }
-   
-     @media (max-width: 1024px) {
-       padding: 34px;
-     }
-   
-     @media (max-width: 768px) {
-       padding: 28px 22px;
-     }
-   
-     @media (max-width: 480px) {
-       padding: 24px 16px;
-     }
-   
-     .card-number {
-       position: absolute;
-       top: 20px;
-       right: 28px;
-       font-size: 42px;
-       font-weight: 900;
-       color: rgba($primary-color, 0.06);
-       transition: $transition;
-       pointer-events: none; 
-   
-       @media (max-width: 768px) {
-         font-size: 34px;
-         top: 16px;
-         right: 20px;
-       }
-   
-       @media (max-width: 480px) {
-         font-size: 28px;
-       }
-     }
-   
-     &__icon {
-       width: 72px;
-       height: 72px;
-       background: #f3f6f4;
-       border-radius: 16px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       margin-bottom: 28px;
-       transition: $transition;
-       flex-shrink: 0;
-   
-       @media (max-width: 768px) {
-         width: 60px;
-         height: 60px;
-         margin-bottom: 20px;
-       }
-   
-       img {
-         width: 40px;
-         height: 40px;
-         object-fit: contain;
-   
-         @media (max-width: 768px) {
-           width: 30px;
-           height: 30px;
-         }
-       }
-     }
-   
-     &__content {
-       h3 {
-         font-size: 22px;
-         font-weight: 700;
-         color: $text-dark;
-         margin-bottom: 14px;
-         line-height: 1.35;
-         transition: $transition;
-         word-wrap: break-word;
-   
-         @media (max-width: 768px) {
-           font-size: 19px;
-         }
-   
-         @media (max-width: 480px) {
-           font-size: 17px;
-         }
-       }
-   
-       p {
-         font-size: 16px;
-         color: $text-gray;
-         line-height: 1.65;
-         margin: 0;
-   
-         @media (max-width: 768px) {
-           font-size: 15px;
-         }
-       }
-     }
-   
-     .card-border-bottom {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       width: 0;
-       height: 4px;
-       background: $primary-color;
-       transition: $transition;
-     }
-   
-     @media (min-width: 1025px) {
-       &:hover {
-         transform: translateY(-10px);
-         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-   
-         .card-number {
-           color: rgba($primary-color, 0.15);
-           transform: scale(1.1);
-         }
-   
-         .use-case-card__icon {
-           background: $primary-color;
-           img {
-             filter: brightness(0) invert(1);
-           }
-         }
-   
-         h3 {
-           color: $primary-color;
-         }
-   
-         .card-border-bottom {
-           width: 100%;
-         }
-       }
-     }
-   
-     @media (max-width: 1024px) {
-       &:active {
-         transform: scale(0.98);
-         background: #fafafa;
-       }
-     }
-   }
+$primary-color: #1D8F2C;
+$text-dark: #232434;
+$text-gray: #64748b;
+$card-bg: #ffffff;
+$transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// Globalni reset unutar sekcije da spriječimo horizontalni scroll
+.use-cases {
+  padding: 100px 0;
+  background-color: #fcfdfe;
+  width: 100%;
+  overflow: hidden; // Ključno da ništa ne viri van
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  // Osiguravamo da container nikad ne bude širi od ekrana
+  .custom-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    @media (max-width: 480px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+    padding: 0;
+
+    .subtitle {
+      color: $primary-color;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 800;
+      color: $text-dark;
+      margin-bottom: 15px;
+      line-height: 1.2;
+
+      @media (max-width: 768px) { font-size: 28px; }
+    }
+
+    p {
+      font-size: 17px;
+      color: $text-gray;
+      line-height: 1.6;
+      @media (max-width: 768px) { font-size: 15px; }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr; // Jedna kolona na mobilnom
+      gap: 20px;
+    }
+  }
+}
+
+.use-case-card {
+  background: $card-bg;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: $transition;
+  box-sizing: border-box;
+  overflow: hidden; // Sječe sve što bi izašlo van radiusa
+  min-width: 0;    // Sprječava grid blowout
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    // Koristimo padding-top za aspect ratio umjesto modernog aspect-ratio 
+    // jer je sigurniji za starije browsere i flexbox bugove
+    height: 0;
+    padding-top: 62.5%; // To je 16:10 ratio
+    background: #f1f5f9;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+      padding: 20px;
+      box-sizing: border-box;
+      transition: transform 0.6s ease;
+    }
+
+    .number-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      color: $text-dark;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+  }
+
+  &__content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+
+    h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: $text-dark;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 14px;
+      color: $text-gray;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    @media (min-width: 1025px) {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-color: rgba($primary-color, 0.3);
+
+      img {
+        transform: scale(1.05);
+      }
+
+      h3 {
+        color: $primary-color;
+      }
+    }
+  }
+}

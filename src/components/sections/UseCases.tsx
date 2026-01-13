@@ -3,39 +3,39 @@ import '../../styles/sections/use-cases.scss';
 const UseCases = () => {
   const cases = [
     {
-      title: "Commercial & Industrial Optimization",
-      desc: "Intelligent management of on-site generation, BESS, and loads to reduce energy costs and improve efficiency.",
-      img: "public/assets/img/useCases/industry.png",
+      title: "Commercial & Industrial",
+      desc: "Intelligent management of on-site generation, BESS, and loads to reduce energy costs.",
+      img: "/assets/img/useCases/useCases1.png",
       num: "01"
     },
     {
-      title: "Utility-Scale BESS & Hybrid Plants",
-      desc: "Control of large-scale BESS and hybrid PV, wind, and hydro plants with full grid compliance.",
-      img: "/images/utility.png",
+      title: "Utility-Scale BESS",
+      desc: "Control of large-scale BESS and hybrid PV, wind, and hydro plants.",
+      img: "/assets/img/useCases/useCases2.png",
       num: "02"
     },
     {
-      title: "Microgrids & Island Operation",
-      desc: "Reliable microgrid control with islanding and black-start capabilities for uninterrupted supply.",
-      img: "/images/microgrid.png",
+      title: "Microgrids & Islanding",
+      desc: "Reliable microgrid control with islanding and black-start capabilities.",
+      img: "/assets/img/useCases/useCases3.png",
       num: "03"
     },
     {
-      title: "EV Charging Infrastructure",
-      desc: "Integrated control of EV charging stations with load balancing, peak shaving, and optimized usage.",
-      img: "/images/ev.png",
+      title: "EV Infrastructure",
+      desc: "Integrated control of EV charging stations with load balancing.",
+      img: "/assets/img/useCases/useCases4.png",
       num: "04"
     },
     {
-      title: "Retrofit & Asset Optimization",
-      desc: "Modernization of existing PV plants to extend lifetime, improve performance, and increase ROI.",
-      img: "/images/retrofit.png",
+      title: "Retrofit & Optimization",
+      desc: "Modernization of existing PV plants to extend lifetime and improve performance.",
+      img: "/assets/img/useCases/useCases5.png",
       num: "05"
     },
     {
-      title: "Energy Trading & Grid Services",
-      desc: "Preparation for electricity markets, price-based dispatch, and grid services (DSO/TSO).",
-      img: "/images/trading.png",
+      title: "Energy Trading",
+      desc: "Preparation for electricity markets and price-based dispatch.",
+      img: "/assets/img/useCases/useCases6.png",
       num: "06"
     }
   ];
@@ -46,25 +46,23 @@ const UseCases = () => {
         <div className="use-cases__header">
           <span className="subtitle">Real-World Applications</span>
           <h2>Use Cases</h2>
-          <div className="header-line"></div>
           <p>
-            The UNICOM EMS Platform is designed to support a wide range of energy
-            applications, from commercial installations to utility-scale systems.
+            The UNICOM EMS Platform supports a wide range of energy applications, 
+            from commercial installations to utility-scale systems.
           </p>
         </div>
 
         <div className="use-cases__grid">
           {cases.map((item, index) => (
             <div className="use-case-card" key={index}>
-              <div className="card-number">{item.num}</div>
-              <div className="use-case-card__icon">
+              <div className="use-case-card__image-container">
+                <div className="number-badge">{item.num}</div>
                 <img src={item.img} alt={item.title} />
               </div>
               <div className="use-case-card__content">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
-              <div className="card-border-bottom"></div>
             </div>
           ))}
         </div>

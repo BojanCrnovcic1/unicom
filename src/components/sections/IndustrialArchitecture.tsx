@@ -5,22 +5,22 @@ const IndustrialArchitecture = () => {
     {
       title: "Modular & Scalable Design",
       desc: "Flexible software architecture allows deployment from single-site systems to multi-site portfolios, easily adapting to project growth.",
-      img: "/images/modular.png"
+      img: "/assets/img/IndustrialArchitecture/ia1.png"
     },
     {
       title: "Edge & Cloud Deployment",
       desc: "Supports both local edge installations and cloud-based platforms for centralized monitoring, control, and analytics.",
-      img: "/images/edge-cloud.png"
+      img: "/assets/img/IndustrialArchitecture/ia2.png"
     },
     {
       title: "Secure & Encrypted",
       desc: "All data transmissions are encrypted and follow best practices to ensure system integrity and cyber security compliance.",
-      img: "/images/security.png"
+      img: "/assets/img/IndustrialArchitecture/ia3.png"
     },
     {
       title: "Industry-Standard Protocols",
       desc: "Compatible with Modbus TCP/RTU, IEC 61850, OPC UA, MQTT, SunSpec, enabling seamless asset integration.",
-      img: "/images/protocols.png"
+      img: "/assets/img/IndustrialArchitecture/ia4.png"
     }
   ];
 
@@ -47,7 +47,6 @@ const IndustrialArchitecture = () => {
                   <h3>{feature.title}</h3>
                   <p>{feature.desc}</p>
                 </div>
-                {/* Dekorativna linija koja se aktivira na hover */}
                 <div className="glow-line"></div>
               </div>
             ))}

@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import App from './App'
 import './index.css'
-//import './scss/main.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
