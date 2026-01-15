@@ -14,31 +14,31 @@ const CoreCapabilities = () => {
       id: 1,
       title: "Real-Time Monitoring & Control",
       text: "Live monitoring of PV plants, BESS, generators, loads, and EV charging systems.",
-      img: "/assets/img/coreCopabilites/coreCop1.png"
+      img: "/assets/img/coreCopabilites/coreCop11.png"
     },
     {
       id: 2,
       title: "Advanced Energy Optimization",
       text: "Intelligent energy flow management between generation, storage, and the grid.",
-      img: "/assets/img/coreCopabilites/coreCop2.png"
+      img: "/assets/img/coreCopabilites/coreCop22.png"
     },
     {
       id: 3,
       title: "Forecast-Based Automation",
       text: "Automated decision-making using forecasting of generation and electricity prices.",
-      img: "/assets/img/coreCopabilites/coreCop3.png"
+      img: "/assets/img/coreCopabilites/coreCop33.png"
     },
     {
       id: 4,
       title: "Islanding & Black-Start",
       text: "Support for islanded operation and microgrid control during outages.",
-      img: "/assets/img/coreCopabilites/coreCop4.png"
+      img: "/assets/img/coreCopabilites/coreCop44.png"
     },
     {
       id: 5,
       title: "Fail-Safe & Fallback Logic",
       text: "Built-in fail-safe mechanisms ensure secure system operation under all conditions.",
-      img: "/assets/img/coreCopabilites/coreCop5.png"
+      img: "/assets/img/coreCopabilites/coreCop55.png"
     }
   ];
 
