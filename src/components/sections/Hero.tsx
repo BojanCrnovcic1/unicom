@@ -29,7 +29,13 @@ const heroSlides = [
     },
     {
         id: 4,
-        image: '/assets/img/hero/hero4.jpg',
+        image: '/assets/img/hero/hero4.jpeg',
+        title: 'UNICOM - We bring the Future in Energy Solutions',
+        link: '/project-details',
+    },
+    {
+        id: 5,
+        image: '/assets/img/hero/hero5.jpg',
         title: 'UNICOM - We bring the Future in Energy Solutions',
         link: '/project-details',
     },

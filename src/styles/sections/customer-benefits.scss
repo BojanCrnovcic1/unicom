@@ -143,7 +143,6 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
       .icon-circle {
         background: $primary-color;
-        /* ZELENI OKVIR (Glow) na hover */
         box-shadow: 0 0 0 6px rgba($primary-color, 0.2);
         transform: scale(1.05);
 

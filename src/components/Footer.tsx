@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="footer-top">
         <div className="footer-top__item">
           <span className="footer-top__label">Call us 24/7</span>
-          <strong>+208-555-0112</strong>
+          <strong>+381652839962</strong>
         </div>
 
         <div className="footer-top__item">
           <span className="footer-top__label">Make a quote</span>
-          <strong>solar@gmail.com</strong>
+          <strong>unicom.bass.systems@outlook.com</strong>
         </div>
 
         <div className="footer-top__item">

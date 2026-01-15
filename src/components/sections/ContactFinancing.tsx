@@ -6,17 +6,17 @@ const ContactFinancing = () => {
     {
       title: "Maintenance & Service",
       desc: "Long-term support to ensure system reliability, performance, and extended lifetime of your energy assets.",
-      img: "/images/maintenance.png"
+      img: "/assets/img/ContactFinancing/cf1.png"
     },
     {
       title: "Consulting & Optimization",
       desc: "Expert guidance for new installations or optimization of existing systems to maximize ROI and efficiency.",
-      img: "/images/consulting.png"
+      img: "/assets/img/ContactFinancing/cf2.png"
     },
     {
       title: "Flexible Financing",
       desc: "Collaborations with investment funds enable BESS models with convenient monthly payment plans.",
-      img: "/images/financing.png"
+      img: "/assets/img/ContactFinancing/cf3.png"
     }
   ];
 

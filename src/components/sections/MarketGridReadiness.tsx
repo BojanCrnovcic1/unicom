@@ -5,17 +5,17 @@ const MarketGridReadiness = () => {
     {
       title: "Electricity Market Integration",
       desc: "Fully prepared for participation in electricity markets (Burse), enabling price-based dispatch and optimized energy trading.",
-      img: "/images/market.png"
+      img: "/assets/img/MarketGridReadiness/market.png"
     },
     {
       title: "Energy Trading & Dispatch",
       desc: "Intelligent EMS algorithms support trading strategies, market optimization, and real-time dispatch for maximum revenue.",
-      img: "/images/trading.png"
+      img: "/assets/img/MarketGridReadiness/trading.png"
     },
     {
       title: "Grid Code & DSO/TSO Compliance",
       desc: "Ensures compliance with local and international grid codes and system operator requirements for safe operation.",
-      img: "/images/compliance.png"
+      img: "/assets/img/MarketGridReadiness/compliance.png"
     }
   ];
 
