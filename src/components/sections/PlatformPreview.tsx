@@ -50,7 +50,7 @@ const PlatformPreview = () => {
           <div className="platform-preview__visual" data-animate="fade-right">
             <div className="image-wrapper">
               <img
-                src="/public/assets/img/platformD.png" 
+                src="/assets/img/platformD.png" 
                 alt="UNICOM EMS Platform dashboard"
               />
               <div className="blob-decoration"></div>
