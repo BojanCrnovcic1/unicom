@@ -9,6 +9,7 @@ const products = [
     model: "ES232/115K-A/EU",
     image: "/assets/img/products/LiquidCoolingES.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingES-spec.jpeg",
+    pdf: "/assets/pdf/catalog.pdf",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const products = [
     model: "ES1306/653K-A/EU",
     image: "/assets/img/products/LiquidCoolingESS.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingESS-spec.jpeg",
+    pdf: "/assets/pdf/catalog.pdf",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ const products = [
     model: "ES1863/931K-A/EU",
     image: "/assets/img/products/LiquidCoolingC&IESS.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingC&IESS-spec.jpeg",
+    pdf: "/assets/pdf/catalog.pdf",
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const products = [
     model: "ES2090/1000K-A/EU",
     image: "/assets/img/products/LiquidCoolingC&IALL.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingC&IALL-spec.jpeg",
-  }
+    pdf: "/assets/pdf/catalog.pdf",
+  },
 ];
 
 const Products = () => {
@@ -46,6 +50,15 @@ const Products = () => {
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
+
+  const handleDownload = (pdfPath: string) => {
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.download = pdfPath.split("/").pop() || "datasheet.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <main className="products-page">
@@ -90,7 +103,10 @@ const Products = () => {
                 <h2>{product.name}</h2>
                 <span className="product-model">{product.model}</span>
 
-                <button className="product-cta">
+                <button
+                  className="product-cta"
+                  onClick={() => handleDownload(product.pdf)}
+                >
                   Request Datasheet
                 </button>
               </div>
