@@ -7,10 +7,8 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10001; // Visok z-index za cijeli header
+  z-index: 10001; 
   transition: $transition;
-  
-  // Uklonjen overflow: hidden da bi meni bio vidljiv
 
   &.header-hidden {
     transform: translateY(-100%);
@@ -165,7 +163,7 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 40px;
   position: relative;
   margin-left: 20px;
-  z-index: 10006; // Najviši nivo da uvek bude klikabilno
+  z-index: 10006;
   padding: 0;
 
   span {
@@ -208,18 +206,16 @@ $transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(14px);
     flex-direction: column;
     padding: 110px 32px 40px;
-    
-    // Sakrivamo ga desno bez sjenke
     transform: translateX(105%); 
     transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
     box-shadow: none; 
     
     gap: 10px;
-    z-index: 10005; // Iznad overlay-a
+    z-index: 10005;
 
     &.menu-open {
       transform: translateX(0);
-      box-shadow: -15px 0 40px rgba(0,0,0,0.15); // Sjenka se dodaje tek kad se otvori
+      box-shadow: -15px 0 40px rgba(0,0,0,0.15);
       
       a {
         opacity: 1;
