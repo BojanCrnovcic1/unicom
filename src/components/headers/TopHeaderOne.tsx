@@ -10,7 +10,7 @@ const TopHeaderOne = ({ wrapperClass, className }: { wrapperClass?: string, clas
                     <ul className="contact-list">
                         <li>
                             <i className="far fa-envelope" />
-                            <Link to="mailto:info@unicom-bass-systems.com" className="link">info@unicom-bass-systems.com</Link>
+                            <Link to="mailto:info@unicom-bess-systems.com" className="link">info@unicom-bess-systems.com</Link>
                         </li>
                         <li>
                             <i className="fa-solid fa-phone-volume" />

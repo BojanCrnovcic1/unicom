@@ -1,7 +1,11 @@
-$primary: #1D8F2C;
+/* =========================
+   VARIABLES
+========================= */
+$primary: #239B3A;
+$primary-soft: #E9F6EC;
 $text-dark: #232434;
 $text-muted: #6b7280;
-$bg-light: #f9faf9;
+$bg-light: #f6f8f6;
 
 .contact-page {
   padding: 120px 0;
@@ -19,11 +23,12 @@ $bg-light: #f9faf9;
   }
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
 .contact-left {
-  background: $primary;
+  background: linear-gradient(
+    160deg,
+    lighten($primary, 6%),
+    $primary
+  );
   color: #fff;
   padding: 60px;
   display: flex;
@@ -45,17 +50,33 @@ $bg-light: #f9faf9;
     font-size: 22px;
     font-weight: 700;
   }
+
+  &:hover .icon::before {
+    animation-duration: 4s;
+    border-color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .icon {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 255, 255, 0.4);
+  position: relative;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.35);
+    animation: spin 8s linear infinite;
+  }
 }
 
 .divider {
@@ -75,11 +96,8 @@ $bg-light: #f9faf9;
   }
 }
 
-/* =========================
-   RIGHT SIDE
-========================= */
 .contact-right {
-  background: #fff;
+  background: $bg-light;
   padding: 70px 80px;
 
   h1 {
@@ -105,9 +123,6 @@ $bg-light: #f9faf9;
   }
 }
 
-/* =========================
-   FORM
-========================= */
 .contact-form {
   .form-row {
     display: grid;
@@ -136,11 +151,13 @@ $bg-light: #f9faf9;
       border-radius: 12px;
       padding: 16px 18px;
       font-size: 15px;
-      transition: border 0.2s ease;
+      background: #fff;
+      transition: all 0.25s ease;
 
       &:focus {
         outline: none;
         border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.15);
       }
     }
 
@@ -151,9 +168,6 @@ $bg-light: #f9faf9;
   }
 }
 
-/* =========================
-   SUBMIT BUTTON
-========================= */
 .submit-btn {
   margin-top: 30px;
   background: $primary;
@@ -176,5 +190,15 @@ $bg-light: #f9faf9;
   &:hover {
     background: darken($primary, 6%);
     transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba($primary, 0.35);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

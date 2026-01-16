@@ -5,8 +5,6 @@ const Contact = () => {
     <main className="contact-page">
       <div className="custom-container">
         <div className="contact-grid">
-
-          {/* LEFT SIDE */}
           <div className="contact-left">
 
             <div className="contact-item">
@@ -15,7 +13,7 @@ const Contact = () => {
               </div>
               <div>
                 <span>Call Us 7/24</span>
-                <strong>+208-555-0112</strong>
+                <strong>+381652839962</strong>
               </div>
             </div>
 
@@ -27,7 +25,7 @@ const Contact = () => {
               </div>
               <div>
                 <span>Make a Quote</span>
-                <strong>solar@gmail.com</strong>
+                <strong>info@unicom-bess-systems.com</strong>
               </div>
             </div>
 
@@ -49,12 +47,14 @@ const Contact = () => {
 
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="contact-right">
             <h1>We'd Love To Hear From You!</h1>
             <p>
-              Nullam varius, erat quis iaculis dictum, eros urna varius eros,
-              ut blandit felis odio in turpis. Quisque rhoncus.
+               Whether you are planning a utility-scale energy storage project,
+               upgrading an industrial facility, or exploring advanced EMS solutions,
+               our team is ready to support you. Contact us for product details,
+               technical documentation, project consultations, or custom energy solutions
+               tailored to your requirements.
             </p>
 
             <form className="contact-form">

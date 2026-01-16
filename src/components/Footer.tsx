@@ -12,7 +12,7 @@ const Footer = () => {
 
         <div className="footer-top__item">
           <span className="footer-top__label">Make a quote</span>
-          <strong>unicom.bass.systems@outlook.com</strong>
+          <strong>unicom.bess.systems@outlook.com</strong>
         </div>
 
         <div className="footer-top__item">

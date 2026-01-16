@@ -50,7 +50,7 @@ const Header = () => {
                                 <NavLink to="/" onClick={closeMenu}>Home</NavLink>
                                 <NavLink to="/platform" onClick={closeMenu}>Platform</NavLink>
                                 <NavLink to="/products" onClick={closeMenu}>Products</NavLink>
-                                <NavLink to="/industries" onClick={closeMenu}>Industries</NavLink>
+                                <NavLink to="/catalogs" onClick={closeMenu}>Catalogs</NavLink>
                                 <NavLink to="/about" onClick={closeMenu}>About</NavLink>
                                 <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
                             </nav>

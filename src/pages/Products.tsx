@@ -9,7 +9,7 @@ const products = [
     model: "ES232/115K-A/EU",
     image: "/assets/img/products/LiquidCoolingES.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingES-spec.jpeg",
-    pdf: "/assets/pdf/catalog.pdf",
+    pdf: "/assets/pdf/LiguidCoolingES.pdf",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const products = [
     model: "ES1306/653K-A/EU",
     image: "/assets/img/products/LiquidCoolingESS.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingESS-spec.jpeg",
-    pdf: "/assets/pdf/catalog.pdf",
+    pdf: "/assets/img/products/LiquidCoolingESS-spec.jpeg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const products = [
     model: "ES1863/931K-A/EU",
     image: "/assets/img/products/LiquidCoolingC&IESS.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingC&IESS-spec.jpeg",
-    pdf: "/assets/pdf/catalog.pdf",
+    pdf: "/assets/img/products/LiquidCoolingC&IESS-spec.jpeg",
   },
   {
     id: 4,
@@ -36,8 +36,18 @@ const products = [
     model: "ES2090/1000K-A/EU",
     image: "/assets/img/products/LiquidCoolingC&IALL.jpeg",
     specsImage: "/assets/img/products/LiquidCoolingC&IALL-spec.jpeg",
-    pdf: "/assets/pdf/catalog.pdf",
+    pdf: "/assets/img/products/LiquidCoolingC&IALL-spec.jpeg",
   },
+  {
+    id: 5,
+    category: "Energy Storage Systems",
+    name: "2.58MW / 5.01MWh Liquid Cooling ESS",
+    model: "ES5015/2580K-C/EU",
+    image: "/assets/img/products/LiquidCoolingESS2.5MW.jpeg",
+    specsImage: "/assets/img/products/LiquidCoolingESS2.5MW-spec.jpeg",
+    pdf: "/assets/img/products/LiquidCoolingESS2.5MW-spec.jpeg",
+  },
+  
 ];
 
 const Products = () => {
