@@ -15,7 +15,7 @@ const catalogs = [
     description:
       "Flexible, Scalabe & Reliable Energy Block",
     cover: "/assets/img/catalogs/catalog2.png",
-    pdf: "/assets/pdf/FlexCombo.pdf",
+    pdf: "/assets/pdf/FlexCombo-D6500-314Ah-1016-5.pdf.pdf",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const catalogs = [
     description:
       "Available Reliable Accontable",
     cover: "/assets/img/catalogs/catalog3.png",
-    pdf: "/assets/pdf/PowerCombo.pdf",
+    pdf: "/assets/pdf/PowerCombo.pdf.pdf",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const catalogs = [
     description:
       "Transformer Station",
     cover: "/assets/img/catalogs/catalog4.png",
-    pdf: "/assets/pdf/TransformerStation.pdf",
+    pdf: "/assets/pdf/TransformerStation.pdf.pdf",
   },
 ];
 

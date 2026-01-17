@@ -6,7 +6,7 @@ import Hero from "../components/sections/Hero"
 import IndustrialArchitecture from "../components/sections/IndustrialArchitecture"
 import IndustrialCapabilities from "../components/sections/IndustrialCapabilities"
 import MarketGridReadiness from "../components/sections/MarketGridReadiness"
-import PlatformPreview from "../components/sections/PlatformPreview"
+import AboutPreview from "../components/sections/AboutPreview"
 import ProductsPreview from "../components/sections/ProductsPreview"
 import UseCases from "../components/sections/UseCases"
 
@@ -17,7 +17,7 @@ const Home = () => {
       <Hero />
       <Marque />
       <CoreCapabilities />
-      <PlatformPreview />
+      <AboutPreview />
       <ProductsPreview />
       <IndustrialCapabilities />
       <UseCases />

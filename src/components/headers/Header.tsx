@@ -41,14 +41,13 @@ const Header = () => {
                         
                         <div className="header-logo">
                             <Link to="/" onClick={closeMenu}>
-                                <img src="/assets/logoH2.jpg" alt="logo" />
+                                <img src="/assets/logo.jpg" alt="logo" />
                             </Link>
                         </div>
 
                         <div className="header-navigation-area">
                             <nav className={`main-nav ${isMenuOpen ? 'menu-open' : ''}`}>
                                 <NavLink to="/" onClick={closeMenu}>Home</NavLink>
-                                <NavLink to="/platform" onClick={closeMenu}>Platform</NavLink>
                                 <NavLink to="/products" onClick={closeMenu}>Products</NavLink>
                                 <NavLink to="/catalogs" onClick={closeMenu}>Catalogs</NavLink>
                                 <NavLink to="/about" onClick={closeMenu}>About</NavLink>

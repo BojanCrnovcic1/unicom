@@ -6,10 +6,13 @@ import Products from './pages/Products'
 import Platform from './pages/Platform'
 import Contact from './pages/Contact'
 import Catalogs from './pages/Catalogs'
+import About from './pages/About'
+import ScrollToTop from './hooks/ScrollToTop'
 
 function App() {
   return (
     <>
+    <ScrollToTop />
       <Header />
 
       <Routes>
@@ -17,6 +20,7 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/platform' element={<Platform />} />
         <Route path='/catalogs' element={<Catalogs />} />
+        <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
 

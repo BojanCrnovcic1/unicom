@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import '../styles/footer.scss'
 
 const Footer = () => {
@@ -26,57 +27,52 @@ const Footer = () => {
         <div className="footer-col footer-brand">
           <div className="footer-logo">UNICOM</div>
           <p>
-            Intelligent energy management solutions for automated,
-            reliable and optimized energy systems.
+            End-to-end Battery Energy Storage Systems and intelligent
+            energy solutions for commercial and industrial applications.
           </p>
 
           <div className="footer-socials">
-            <a href="#">Fb</a>
-            <a href="#">X</a>
-            <a href="#">In</a>
-            <a href="#">Yt</a>
+            <a href="#" aria-label="LinkedIn">In</a>
+            <a href="#" aria-label="YouTube">Yt</a>
           </div>
         </div>
 
         <div className="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Company</h4>
           <ul>
-            <li>About Us</li>
-            <li>Our Services</li>
-            <li>Blog</li>
-            <li>FAQs</li>
-            <li>Contact</li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/catalogs">Catalogs</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>Services</h4>
+          <h4>Solutions</h4>
           <ul>
-            <li>Energy Management</li>
-            <li>Battery Optimization</li>
-            <li>Solar Systems</li>
-            <li>Microgrids</li>
-            <li>Licensing</li>
+            <li>Battery Energy Storage Systems (BESS)</li>
+            <li>Energy Management Systems (EMS)</li>
+            <li>Grid & Industrial Storage</li>
+            <li>Charging Infrastructure</li>
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>Recent Posts</h4>
+          <h4>Get in Touch</h4>
+          <p>
+            Looking for a reliable energy storage solution or project
+            consultation?
+          </p>
 
-          <div className="footer-post">
-            <span className="footer-post__date">20 Feb, 2025</span>
-            <p>Energy storage systems and future grids</p>
-          </div>
-
-          <div className="footer-post">
-            <span className="footer-post__date">15 Dec, 2024</span>
-            <p>How EMS improves battery lifetime</p>
-          </div>
+          <Link to="/contact" className="footer-cta">
+            Request a Quote →
+          </Link>
         </div>
+
       </div>
 
       <div className="footer-bottom">
-        © 2026 UNICOM Energy Systems. All rights reserved.
+        © 2026 UNICOM BESS Systems. All rights reserved.
       </div>
 
     </footer>
